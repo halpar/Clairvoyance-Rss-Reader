@@ -4,3 +4,15 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
+
+const validateForm = require("./index.js");
+const showModal = require("./modal.js");
+
+var addnewFeedForm = document.getElementById('addnewFeedForm');
+
+addnewFeedForm.addEventListener("submit", validateForm);
+
+
+// middleNews.addEventListener("click")
+
+

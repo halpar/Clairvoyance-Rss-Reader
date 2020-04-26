@@ -1,19 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.0.slim.js"
+    integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c938557ed7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div id="pop-up">
+      <div class="popcontainer">
+        <form id="addnewFeedForm" name="rssFeedAdd" onsubmit="return false" method="post">
+          <button id="sbmtxt" class="submitBtn" type="submit">Add +</button>
+          <input class="submitTxt" type="text" name="urlField"
+            placeholder="Enter website or feed , Example :  https://www.cnnturk.com/feed/rss/all/news" required>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <nav id="leftside" class="col-2">
+        <ul class="nav nav-pills flex-column">
+          <li id="thumbnail" class="btnModal">
+            <a class="nav-link" href="#"> <i class="fab fa-ravelry fa-1x"></i> <b>Clairvoyance</b>
+              <p> + Add</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class="fas fa-bars"></i> All feeds </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="far fa-star"></i> Favourites</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="far fa-circle"></i> Unread Article</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-circle"></i> Recently Read</a>
+          </li>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <li id="subsTab" class="nav-item">
+            <a class="nav-link" href="#"> SUBSCRIPTIONS</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="middle" role="search" class="col-4">
+        <p>No articles Available</p>
+      </div>
+
+      <div id="rightside" role="main" class="col-6">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- You can also require other files to run in this process -->
+  <!-- <script type="module" src="index.js"></script>
+  <script src="./node_modules/rss-parser/dist/rss-parser.min.js"></script>
+  <script src="./index.js"></script>
+  <script src="./main.js"></script> -->
+
+  <!-- <script src="./modal.js"></script> -->
+
+  <script src="./renderer.js"></script>
+
+</body>
+
 </html>
