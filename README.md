@@ -3,7 +3,7 @@
  
  My purpose to develop a Rss Reader is just a practice to get used with the syntax of Vanilla JS.
  
-# Here some in-app images ;
+# Here some in-app images 
  
   ![ScreenShot](https://github.com/halpar/Clairvoyance-Rss-Reader/blob/master/img/rss-import.png)
   ![ScreenShot](https://github.com/halpar/Clairvoyance-Rss-Reader/blob/master/img/rss-feeds.png)
